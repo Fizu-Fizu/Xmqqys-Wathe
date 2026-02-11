@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "xmqqyswathe",
+	"version": "${version}",
+	"name": "XmqqysWathe",
+	"description": "",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/xmqqyswathe/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.xmqqy.xmqqyswathe.XmqqysWathe"
+		],
+		"client": [
+			"io.github.xmqqy.xmqqyswathe.XmqqysWatheClient"
+		],
+		"fabric-datagen": [
+			"io.github.xmqqy.xmqqyswathe.XmqqysWatheDataGenerator"
+		]
+	},
+	"mixins": [
+		"xmqqyswathe.mixins.json",
+		{
+			"config": "xmqqyswathe.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"harpymodloader": "*"
+	}
+}
