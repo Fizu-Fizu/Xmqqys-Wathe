@@ -1,5 +1,7 @@
 package io.github.xmqqy.xmqqyswathe.item;
 
+import java.util.UUID;
+
 import io.github.xmqqy.xmqqyswathe.component.BombComponents;
 import io.github.xmqqy.xmqqyswathe.registry.ModItems;
 import net.minecraft.network.chat.Component;
@@ -13,12 +15,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import java.util.Optional;
 
 public class BombItem extends Item {
     public BombItem(Properties properties) {
         super(properties);
     }
 
+    // 炸弹时间
     public static void setBombTime(ItemStack stack, int time) {
         stack.set(BombComponents.BOMB_TIME, time);
     }
@@ -27,6 +31,7 @@ public class BombItem extends Item {
         return stack.getOrDefault(BombComponents.BOMB_TIME, -1);
     }
 
+    // 冷却
     public static void setCooldown(ItemStack stack, int cooldown) {
         stack.set(BombComponents.COOLDOWN, cooldown);
     }
@@ -35,11 +40,27 @@ public class BombItem extends Item {
         return stack.getOrDefault(BombComponents.COOLDOWN, 0);
     }
 
+    // 玩家
+    public static void setSource(ItemStack stack, UUID source) {
+    stack.set(BombComponents.SOURCE, Optional.ofNullable(source).map(UUID::toString));
+    }
+
+    public static UUID getSource(ItemStack stack) {
+    Optional<String> sourceStr = stack.getOrDefault(BombComponents.SOURCE, Optional.empty());
+        if (sourceStr.isPresent()) {
+            try {
+                return UUID.fromString(sourceStr.get());
+            } catch (IllegalArgumentException e) {
+            }
+        }
+        return null;
+    }
+
     // 创建初始炸弹
     public static ItemStack createBomb() {
         ItemStack stack = new ItemStack(ModItems.BOMB);
-        setBombTime(stack, 20 * 20); // 20秒 = 400刻
-        setCooldown(stack, 20);       // 1秒 = 20刻
+        setBombTime(stack, 20 * 20); // 400刻
+        setCooldown(stack, 20);// 20刻
         return stack;
     }
 

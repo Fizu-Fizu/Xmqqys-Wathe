@@ -35,6 +35,7 @@ public class UnlitBombItem extends Item {
         XmqqysWathe.SCHEDULER.schedule(() -> {
             if (targetPlayer.isAlive() && targetPlayer.level() == serverLevel) {
                 ItemStack litBomb = BombItem.createBomb(); // 炸弹
+                BombItem.setSource(litBomb, player.getUUID());
                 if (targetPlayer.getInventory().add(litBomb)) {
                     player.level().playSound(null, targetPlayer.getX(), targetPlayer.getY(), targetPlayer.getZ(), SoundEvents.TNT_PRIMED, SoundSource.PLAYERS, 1.0f, 1.0f);
                 } else {

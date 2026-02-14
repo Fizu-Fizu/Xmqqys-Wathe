@@ -1,5 +1,7 @@
 package io.github.xmqqy.xmqqyswathe.event;
 
+import java.util.UUID;
+
 import dev.doctor4t.wathe.game.GameConstants;
 import dev.doctor4t.wathe.game.GameFunctions;
 import io.github.xmqqy.xmqqyswathe.item.BombItem;
@@ -35,13 +37,13 @@ public class ModEvents {
                 BombItem.setBombTime(stack, bombTime - 1);
             }
 
-            // 2. 冷却时间减 1（如果>0）
+            // 2. 冷却时间减 1
             int cooldown = BombItem.getCooldown(stack);
             if (cooldown > 0) {
                 BombItem.setCooldown(stack, cooldown - 1);
             }
 
-            // 3. 时间 ≤ 0 → 爆炸（音效 + 杀死玩家）
+            // 3. 时间 ≤ 0 → 爆炸
             if (bombTime <= 1) {
                 inv.setItem(i, ItemStack.EMPTY);
 
@@ -53,13 +55,21 @@ public class ModEvents {
                     SoundSource.PLAYERS,
                     1.0f, 1.0f
                 );
-
+                // 获取击杀者
+                UUID sourceUUID = BombItem.getSource(stack);
+                ServerPlayer killer = null;
+                if (sourceUUID != null) {
+                    killer = player.getServer().getPlayerList().getPlayer(sourceUUID);
+                }
+                if (killer == null) {
+                    killer = player;
+                }
                 
                 // 调用 Wathe 的死亡方法
                 GameFunctions.killPlayer(
                     player,
                     true,         
-                    player,                  
+                    killer,
                     GameConstants.DeathReasons.GRENADE
                 );
 

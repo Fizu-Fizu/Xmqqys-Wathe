@@ -3,6 +3,7 @@
     "announcement.goals.xmqqyswathe.pelican": "吞噬所有人!",
     "announcement.role.xmqqyswathe.bomber": "炸弹客",
     "item.xmqqyswathe.bomb": "炸弹",
+    "item.xmqqyswathe.unlit_bomb": "未点燃炸弹",
     "message.xmqqyswathe.bomb.status.cooldown": "%s秒后爆炸 (冷却中: %s秒)",
     "message.xmqqyswathe.bomb.status.armed": "%s秒后爆炸",
     "message.xmqqyswathe.bomb.cooldown": "§c炸弹冷却中 (%.1f秒)",

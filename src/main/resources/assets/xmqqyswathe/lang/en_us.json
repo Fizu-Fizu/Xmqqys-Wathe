@@ -1,9 +1,9 @@
 {
     "announcement.role.xmqqyswathe.pelican": "Pelican",
     "announcement.goals.xmqqyswathe.pelican": "Devour everyone!",
-
     "announcement.role.xmqqyswathe.bomber": "Bomber",
     "item.xmqqyswathe.bomb": "Bomb",
+    "item.xmqqyswathe.unlit_bomb": "UnlitBomb",
     "message.xmqqyswathe.bomb.status.cooldown": "Explosion in %s seconds (Cooldown: %s seconds)",
     "message.xmqqyswathe.bomb.status.armed": "Explosion in %s seconds",
     "message.xmqqyswathe.bomb.cooldown": "§cBomb on cooldown (%.1f seconds)",
