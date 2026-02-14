@@ -1,4 +1,12 @@
 {
     "announcement.role.xmqqyswathe.pelican": "鹈鹕",
-    "announcement.goals.xmqqyswathe.pelican": "吞噬所有人!"
+    "announcement.goals.xmqqyswathe.pelican": "吞噬所有人!",
+    "announcement.role.xmqqyswathe.bomber": "炸弹客",
+    "item.xmqqyswathe.bomb": "炸弹",
+    "message.xmqqyswathe.bomb.status.cooldown": "%s秒后爆炸 (冷却中: %s秒)",
+    "message.xmqqyswathe.bomb.status.armed": "%s秒后爆炸",
+    "message.xmqqyswathe.bomb.cooldown": "§c炸弹冷却中 (%.1f秒)",
+    "message.xmqqyswathe.bomb.full_inventory": "§c目标背包已满",
+    "message.xmqqyswathe.bomb.transferred": "§a已将炸弹转移给 %s",
+    "announcement.goals.xmqqyswathe.bomber": "给玩家传递炸弹 让他们爆炸"
 }

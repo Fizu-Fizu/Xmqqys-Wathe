@@ -1,13 +1,12 @@
 {
 	"required": true,
-	"package": "io.github.xmqqy.xmqqyswathe.mixin",
-	"compatibilityLevel": "JAVA_21",
+	"minVersion": "0.8",
+	"package": "io.github.xmqqy.xmqqyswathe.mixin.role.bomber",
+	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"BomberShopMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }

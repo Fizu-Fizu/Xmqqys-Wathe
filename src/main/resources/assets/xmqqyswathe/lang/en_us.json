@@ -1,4 +1,13 @@
 {
     "announcement.role.xmqqyswathe.pelican": "Pelican",
-    "announcement.goals.xmqqyswathe.pelican": "Devour everyone!"
+    "announcement.goals.xmqqyswathe.pelican": "Devour everyone!",
+
+    "announcement.role.xmqqyswathe.bomber": "Bomber",
+    "item.xmqqyswathe.bomb": "Bomb",
+    "message.xmqqyswathe.bomb.status.cooldown": "Explosion in %s seconds (Cooldown: %s seconds)",
+    "message.xmqqyswathe.bomb.status.armed": "Explosion in %s seconds",
+    "message.xmqqyswathe.bomb.cooldown": "§cBomb on cooldown (%.1f seconds)",
+    "message.xmqqyswathe.bomb.full_inventory": "§cTarget inventory is full",
+    "message.xmqqyswathe.bomb.transferred": "§aBomb transferred to %s",
+    "announcement.goals.xmqqyswathe.bomber": "Pass the bomb to players to make them explode."
 }

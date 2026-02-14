@@ -3,7 +3,6 @@ package io.github.xmqqy.xmqqyswathe.registry;
 import io.github.xmqqy.xmqqyswathe.XmqqysWathe;
 import io.github.xmqqy.xmqqyswathe.component.BombComponents;
 import io.github.xmqqy.xmqqyswathe.item.BombItem;
-import io.github.xmqqy.xmqqyswathe.item.UnlitBombItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -20,10 +19,6 @@ public class ModItems {
     .component(BombComponents.BOMB_TIME, 20 * 20)   // 400 ticks
     .component(BombComponents.COOLDOWN, 20)         // 20 ticks
     );
-
-    public static final UnlitBombItem UNLITBOMB = new UnlitBombItem(new Item.Properties()
-    .stacksTo(1)
-    );
     
 
     // Wathe 模组的装备组资源键
@@ -34,7 +29,6 @@ public class ModItems {
     public static void init() {
         // 1. 注册物品
         Registry.register(BuiltInRegistries.ITEM, XmqqysWathe.id("bomb"), BOMB);
-        Registry.register(BuiltInRegistries.ITEM, XmqqysWathe.id("unlitbomb"), UNLITBOMB);
 
         // 2. 把炸弹放入 Wathe 的装备组
         ItemGroupEvents.modifyEntriesEvent(EQUIPMENT_GROUP).register(entries -> {

@@ -75,7 +75,7 @@ fabricApi {
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings() 
+    mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     
@@ -85,10 +85,10 @@ dependencies {
     modImplementation "dev.doctor4t:ratatouille:${ratatouille_version}" 
     
     // Cardinal Components API
-    modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:${cca_version}"
-    include "org.ladysnake.cardinal-components-api:cardinal-components-base:${cca_version}"
-    modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:${cca_version}"
-    include "org.ladysnake.cardinal-components-api:cardinal-components-entity:${cca_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cca_version}"
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cca_version}"
+	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cca_version}"
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cca_version}"
     
     // fzzy-config
     modImplementation "maven.modrinth:fzzy-config:${fzzyConfigVersion}"

@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import io.github.xmqqy.xmqqyswathe.component.BombComponents;
 import io.github.xmqqy.xmqqyswathe.event.ModEvents;
 import io.github.xmqqy.xmqqyswathe.registry.ModItems;
-import io.github.xmqqy.xmqqyswathe.skill.TaskScheduler;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
 
@@ -18,8 +17,6 @@ public class XmqqysWathe implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final TaskScheduler SCHEDULER = new TaskScheduler();
-
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing XmqqysWathe mod...");
@@ -29,12 +26,10 @@ public class XmqqysWathe implements ModInitializer {
 		ModEvents.init();
 		ModItems.init();
 		// 初始化角色
-		ModRoles.init();
-		SCHEDULER.init();
-		
+		ModRoles.init(); 
     	LOGGER.info("XmqqysWathe mod initialization completed!");
 	}	
 	public static ResourceLocation id(String key) {
-	    return ResourceLocation.fromNamespaceAndPath(MOD_ID, key);
+	    return ResourceLocation.fromNamespaceAndPath(MOD_ID, key);   // 直接构造
 	}
 }
