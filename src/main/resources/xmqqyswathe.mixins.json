@@ -4,7 +4,8 @@
 	"package": "io.github.xmqqy.xmqqyswathe.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"role.bomber.BomberShopMixin"
+		"role.bomber.BomberShopMixin",
+		"role.warden.WardenShopMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

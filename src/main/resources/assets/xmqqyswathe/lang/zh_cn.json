@@ -1,6 +1,9 @@
 {
-    "announcement.role.xmqqyswathe.pelican": "鹈鹕",
-    "announcement.goals.xmqqyswathe.pelican": "吞噬所有人!",
+    "announcement.role.xmqqyswathe.warden": "狱长",
+    "announcement.goals.xmqqyswathe.warden": "有坏人 把他们关起来",
+    "item.xmqqyswathe.handcuff": "手铐",
+    "message.xmqqyswathe.handcuff.hold": "§a关押了 %s",
+
     "announcement.role.xmqqyswathe.bomber": "炸弹客",
     "item.xmqqyswathe.bomb": "炸弹",
     "item.xmqqyswathe.unlit_bomb": "未点燃炸弹",

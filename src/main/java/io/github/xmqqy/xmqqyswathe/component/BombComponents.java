@@ -1,12 +1,14 @@
 package io.github.xmqqy.xmqqyswathe.component;
 
+import java.util.Optional;
+
 import com.mojang.serialization.Codec;
+
 import io.github.xmqqy.xmqqyswathe.XmqqysWathe;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.codec.ByteBufCodecs;
-import java.util.Optional;
 
 public class BombComponents {
     // 炸弹剩余时间（单位：tick）

@@ -1,5 +1,6 @@
 package io.github.xmqqy.xmqqyswathe.item;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import io.github.xmqqy.xmqqyswathe.component.BombComponents;
@@ -15,7 +16,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import java.util.Optional;
 
 public class BombItem extends Item {
     public BombItem(Properties properties) {
@@ -84,7 +84,7 @@ public class BombItem extends Item {
         if (level.isClientSide) {
             return InteractionResult.PASS;
         }
-        // 是玩家，不是自己
+        // 是玩家，不是自己?
         if (!(target instanceof ServerPlayer targetPlayer)) return InteractionResult.PASS;
         if (targetPlayer.equals(player)) {
             player.displayClientMessage(Component.translatable("message.xmqqyswathe.bomb.no_self"), true);

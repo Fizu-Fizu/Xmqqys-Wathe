@@ -6,14 +6,14 @@ import dev.doctor4t.wathe.api.WatheRoles;
 
 public class ModRoles {
 
-    public static final Role PELICAN = WatheRoles.registerRole(new Role(
-            XmqqysWathe.id("pelican"),
+    public static final Role WARDEN = WatheRoles.registerRole(new Role(
+            XmqqysWathe.id("warden"),
             0x00C800,
+            true,
             false,
-            false,
-            Role.MoodType.FAKE,
-            -1,
-            true
+            Role.MoodType.REAL,
+            WatheRoles.CIVILIAN.getMaxSprintTime(),
+            false
         ));
 
     public static final Role BOMBER = WatheRoles.registerRole(new Role(
@@ -27,8 +27,8 @@ public class ModRoles {
         ));
 
         public static void init() {
-        // pelican
-        Harpymodloader.setRoleMaximum(PELICAN, 0);
+        // warden
+        Harpymodloader.setRoleMaximum(WARDEN, 1);
 
         // bomber
         Harpymodloader.setRoleMaximum(BOMBER, 1);

@@ -38,7 +38,7 @@ public abstract class BomberShopMixin {
         // 根据索引处理购买
         switch (index) {
             case 0: // 炸弹
-                buyItem(ModItems.UNLITBOMB.getDefaultInstance(), 75);
+                buyItem(ModItems.UNLITBOMB.getDefaultInstance(), 50);
                 break;
             case 1: // 刀
                 buyItem(WatheItems.KNIFE.getDefaultInstance(), 200);
@@ -98,7 +98,7 @@ public abstract class BomberShopMixin {
             return;
         }
         if (stack.getItem() == ModItems.UNLITBOMB) {
-        player.getCooldowns().addCooldown(stack.getItem(), 600);
+        player.getCooldowns().addCooldown(stack.getItem(), 1000);
         }
         balance -= price;
         sync();
@@ -119,7 +119,7 @@ public abstract class BomberShopMixin {
             failPurchase("疯狂模式启动失败");
             return;
         }
-        player.getCooldowns().addCooldown(WatheItems.PSYCHO_MODE, 2400);
+        player.getCooldowns().addCooldown(WatheItems.PSYCHO_MODE, 6000);
         balance -= price;
         sync();
         playSound(true);
@@ -139,7 +139,7 @@ public abstract class BomberShopMixin {
             failPurchase("关灯失败");
             return;
         }
-        player.getCooldowns().addCooldown(WatheItems.BLACKOUT, 2400);
+        player.getCooldowns().addCooldown(WatheItems.BLACKOUT, 6000);
         balance -= price;
         sync();
         playSound(true);

@@ -2,5 +2,11 @@
     "parent": "minecraft:item/generated",
     "textures": {
         "layer0": "xmqqyswathe:item/bomb"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "translation": [-999, -999, -99],
+            "scale": [0, 0, 0]
+        }
     }
 }
